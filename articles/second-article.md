@@ -7,8 +7,6 @@ date: 2021-03-08T19:46:11.492Z
 color: "#d20d0d"
 location: '{"type":"Point","coordinates":[-89.8242187,34.8859309]}'
 ---
-![lacrosse]( "Lacrosse")
-
 this is another test
 
 ```python
