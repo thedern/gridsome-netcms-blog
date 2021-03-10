@@ -1,5 +1,19 @@
 <template>
   <div class="layout">
+    <div>
+        <b-navbar toggleable="sm" type="dark" variant="secondary" sticky="true">
+          <b-navbar-toggle target="nav-text-collapse"></b-navbar-toggle>
+
+          <b-navbar-brand to="/">Darren's Blog</b-navbar-brand>
+
+          <b-collapse id="nav-text-collapse" is-nav>
+            <b-navbar-nav>
+              <g-link to="/articles-list/"> <b-nav-text class="m-2">Articles</b-nav-text></g-link>
+              <g-link to="/about/"> <b-nav-text class="m-2">About</b-nav-text></g-link>
+            </b-navbar-nav>
+          </b-collapse>
+        </b-navbar>
+      </div>
     <slot/>
   </div>
 </template>
@@ -19,12 +33,7 @@ body {
   margin: 0;
 }
 
-.layout {
-  max-width: 760px;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-}
+
 
 @media screen and (min-width: 992px) {
   .container {

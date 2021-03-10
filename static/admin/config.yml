@@ -19,4 +19,4 @@ collections:
         - {label: "Date", name: "date", widget: "datetime"}
         - {label: "Body", name: "body", widget: "markdown"}
         - {label: 'Color', name: 'color', widget: 'color', enableAlpha: true, allowInput: true }
-        - {label: "Location", name: "location", widget: "map" }
+        - {label: "Location", name: "location", widget: "map", requied: false }
