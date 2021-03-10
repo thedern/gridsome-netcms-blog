@@ -1,33 +1,29 @@
 <template>
   <Layout>
-    <div class="container">
-      <h1>List articles</h1>
-      <div v-for="article in $page.articles.edges" :key="article.id" class="article d-flex">
-        <div class="article__img"
-             :style="{ 'background-image': 'url(' + article.node.image + ')' }"></div>
-        <div class="article__body">
-          <g-link :to="article.node.path" class="article__link"></g-link>
-          <h1 class="article__title">{{article.node.title}}</h1>
-          <p class="article__abstract">{{article.node.abstract}}</p>
+    <div class="container mt-4">
+      <div class="row">
+        <h1>Landing Page</h1>
+        <div class="col-md-12 bg border border-danger" />
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+             <div>
+              <p class="lead mt-2 text-justify p-4 jumbotron jumbotron-fluid" >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc euismod tellus quis condimentum auctor. Cras consectetur
+              leo ligula. Proin mollis porta vestibulum. Nulla facilisi. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+              Fusce nec metus nec nisl suscipit pretium. Praesent euismod nibh risus, in pellentesque erat mollis vitae.
+              Praesent facilisis lectus nibh, et consequat sapien interdum quis. Orci varius natoque penatibus et magnis
+              dis parturient montes, nascetur ridiculus mus.
+              </p>
+            </div>
         </div>
       </div>
     </div>
+
   </Layout>
 </template>
-<page-query>
-query {
-  articles: allArticles {
-    edges {
-      node {
-        title
-        abstract
-        image
-        path
-      }
-    }
-  }
-}
-</page-query>
+
+
 <script>
 export default {
   metaInfo: {
@@ -35,46 +31,14 @@ export default {
   }
 };
 </script>
+
 <style>
-.article {
-  display: flex;
-  align-items: center;
-  box-shadow: 5px 5px 11px rgba(0, 0, 0, 0.15);
-  border-radius: 8px;
-  position: relative;
-  margin-top: 50px;
-  background-color: #fff;
-}
-@media screen and (max-width: 992px) {
-  .article {
-    display: block;
+  .bg {
+    min-height: 600px;
+    background-image: url("~@/assets/images/redbobber.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
-}
-.article__title {
-  margin-top: 0;
-}
-.article__body {
-  padding: 15px 30px;
-}
-.article__link {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-}
-.article__img {
-  width: 250px;
-  height: 140px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 8px;
-  margin-right: 15px;
-}
-@media screen and (max-width: 992px) {
-  .article__img {
-    width: 100%;
-    height: 180px;
-  }
-}
 </style>
